@@ -1,17 +1,19 @@
 package org.young.util;
 
 public class Utils {
+    //~ Methods ****************************************************************
 
-	public static void printArray(int[] arr) {
-		boolean isFirst = true;
-		
-		for (int i : arr) {
-			if (isFirst) {
-				isFirst = false;
-			} else {
-				System.out.print(", ");
-			}
-			System.out.print(i);
-		}
-	}
+    public static void printArray(int[] arr) {
+        boolean isFirst = true;
+
+        for (int i : arr) {
+            if (isFirst) {
+                isFirst = false;
+            } else {
+                System.out.print(", ");
+            }
+
+            System.out.print(i);
+        }
+    }
 }
