@@ -89,7 +89,7 @@ public class InsertToDBWithTestData {
     /**
      * 随机生成一个比当前日期小的日期
      * 
-     * @return
+     * @return （yyyy年MM月dd日）
      */
     private static String getRandomDate() {
         Date date     = new Date();
