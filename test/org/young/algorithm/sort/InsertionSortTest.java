@@ -2,8 +2,7 @@ package org.young.algorithm.sort;
 
 import org.junit.Test;
 
-import org.young.util.Utils;
-
+import org.young.util.CollectionUtil;
 
 public class InsertionSortTest {
     //~ Instance fields ********************************************************
@@ -22,13 +21,13 @@ public class InsertionSortTest {
     @Test
     public void testSortByAsc() {
         InsertionSort.sortByAsc(arr);
-        Utils.printArray(arr);
+        CollectionUtil.printArray(arr);
     }
 
 
     @Test
     public void testSortByDesc() {
         InsertionSort.sortByDesc(arr);
-        Utils.printArray(arr);
+        CollectionUtil.printArray(arr);
     }
 }
