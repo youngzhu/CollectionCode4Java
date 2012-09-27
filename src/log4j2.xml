@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appenders>
+		<RollingFile name="CNLogger" fileName="logs/CNLogger.log"
+			filePattern="logs/%d{yyyy-MM}/log-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %C [%t] %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+
+		<RollingFile name="ENLogger" fileName="logs/ENLogger.log"
+			filePattern="logs/%d{yyyy-MM}/log-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %C [%t] %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</appenders>
+	
+	<loggers>
+
+		<logger name="ENLogger" level="info">
+			<appender-ref ref="ENLogger" />
+		</logger>
+		<logger name="CNLogger" level="info">
+			<appender-ref ref="CNLogger" />
+		</logger>
+		
+		<logger name="consoleLogger" level="trace">
+			<appender-ref ref="console" />
+		</logger>
+	</loggers>
+</configuration>
