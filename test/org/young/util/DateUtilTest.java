@@ -13,10 +13,6 @@ public class DateUtilTest {
 		Date newDate = DateUtil.addHour(31, oldDate);
 		
 		System.out.println(newDate);
-		
-		// Add from Web
 	}
-
 	
-	// Add from local
 }
