@@ -12,9 +12,9 @@ public class MySQLTest {
 
     @Test
     public void testGetPagingSql() {
-        String str1 = MySQL.getPagingSql(QUERY_SQL, 6, 1);
+        String str1 = MySQL.getPagingSql(QUERY_SQL, 5, 1);
 
-        String str2 = MySQL.getPagingSql(QUERY_SQL, 9, 8);
+        String str2 = MySQL.getPagingSql(QUERY_SQL, 10, 8);
 
         System.out.println(str1);
 
