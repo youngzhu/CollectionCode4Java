@@ -1,6 +1,7 @@
 package org.young.util;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.young.constant.ConstantString;
 
@@ -39,6 +40,20 @@ public class CollectionUtil {
             }
 
             System.out.print(i);
+        }
+    }
+	
+	public static void printList(List<? extends Object> list) {
+        boolean isFirst = true;
+
+        for (Object obj : list) {
+            if (isFirst) {
+                isFirst = false;
+            } else {
+                System.out.print(", ");
+            }
+
+            System.out.print(obj);
         }
     }
 }
