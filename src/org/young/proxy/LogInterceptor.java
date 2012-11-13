@@ -29,7 +29,7 @@ public class LogInterceptor implements InvocationHandler {
 		
 		/*
 		 * proxy，代理对象本身。
-		 * 	如果使用它，会使程序陷入是循环
+		 * 	如果使用它，会使程序陷入死循环（自身调用自身）
 		 */
 //		System.out.println(proxy + "==============");
 		
