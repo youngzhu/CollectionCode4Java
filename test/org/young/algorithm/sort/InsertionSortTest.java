@@ -7,7 +7,7 @@ import org.young.util.CollectionUtil;
 public class InsertionSortTest {
     //~ Instance fields ********************************************************
 
-    private int[] arr = new int[] {
+    private Integer[] arr = new Integer[] {
             5,
             2,
             4,
