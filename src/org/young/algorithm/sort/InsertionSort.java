@@ -2,7 +2,7 @@ package org.young.algorithm.sort;
 
 
 /**
- * 插入排序（Insertion Sort�?
+ * 插入排序（Insertion Sort�?
  *
  * @author by Young.ZHU
  * on 下午10:27:21 2012-7-22
@@ -12,7 +12,7 @@ package org.young.algorithm.sort;
 public class InsertionSort {
     //~ Methods ****************************************************************
 
-    public static void sortByAsc(int[] arr) {
+    public static void sortByAsc(Integer[] arr) {
         for (int j = 1; j < arr.length; j++) {
             int key = arr[j];
             int i   = j - 1;
@@ -27,7 +27,7 @@ public class InsertionSort {
     }
 
 
-    public static void sortByDesc(int[] arr) {
+    public static void sortByDesc(Integer[] arr) {
         for (int j = 1; j < arr.length; j++) {
             int key = arr[j];
             int i   = j - 1;
