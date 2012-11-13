@@ -29,17 +29,17 @@ public class CollectionUtil {
 		return str;
 	}
 	
-	public static void printArray(int[] arr) {
+	public static void printArray(Object[] arr) {
         boolean isFirst = true;
 
-        for (int i : arr) {
+        for (Object obj : arr) {
             if (isFirst) {
                 isFirst = false;
             } else {
                 System.out.print(", ");
             }
 
-            System.out.print(i);
+            System.out.print(obj);
         }
     }
 	
