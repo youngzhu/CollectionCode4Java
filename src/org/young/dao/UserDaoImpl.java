@@ -10,6 +10,9 @@ public class UserDaoImpl implements UserDao {
 		return null;
 	}
 
+	/*
+	 * 给需保存的对象生成一个ID
+	 */	
 	public void save(User user) {
 
 		System.out.println("[Business Logic]Saving the user ...");
