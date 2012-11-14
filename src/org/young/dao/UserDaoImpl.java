@@ -3,6 +3,14 @@ package org.young.dao;
 import org.young.db.DB;
 import org.young.entity.User;
 
+/**
+ * 
+ *
+ * @author by Young.ZHU
+ *		on 2012-11-14
+ *
+ * Package&FileName: org.young.dao.UserDaoImpl
+ */
 public class UserDaoImpl implements UserDao {
 
 	public User load(String id) {
