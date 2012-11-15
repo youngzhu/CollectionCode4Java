@@ -10,7 +10,7 @@ import org.young.util.CollectionUtil;
  *
  * Package&FileName: org.young.spring.aop.log.DefaultLogInterceptor
  */
-public class DefaultLogInterceptor extends LogInterceptor {
+public class DefaultLogInterceptor extends AbstractLogInterceptor {
 
 	public void afterMethod() {
 

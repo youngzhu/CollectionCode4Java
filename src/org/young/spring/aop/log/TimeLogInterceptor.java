@@ -8,7 +8,7 @@ package org.young.spring.aop.log;
  *
  * Package&FileName: org.young.spring.aop.log.TimeLogInterceptor
  */
-public class TimeLogInterceptor extends LogInterceptor {
+public class TimeLogInterceptor extends AbstractLogInterceptor {
 
 	private long startTime;
 	private long endTime; //

@@ -11,7 +11,7 @@ import org.aopalliance.intercept.MethodInvocation;
  *
  * Package&FileName: org.young.spring.aop.log.LogInterceptor
  */
-public class LogInterceptor implements MethodInterceptor {
+public abstract class AbstractLogInterceptor implements MethodInterceptor {
 
 	private String logName;
 	
