@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import org.young.util.DateUtil;
+
 
 /**
  * 生成向数据库中插入一些数据的SQL
@@ -66,8 +68,6 @@ public class InsertToDBWithTestData {
      */
     private static String     SQL_EMPLOYEE   = "INSERT INTO T_EMPLOYEE(F_NAME, F_GENDER, F_BIRTHDAY) " +
         "VALUES ('V_NAME', 'V_GENDER', 'V_BIRTHDAY');";
-    private static DateFormat DATE_FORMATER  = new SimpleDateFormat(
-            "yyyy-MM-dd");
 
     //~ Methods ****************************************************************
 
@@ -98,7 +98,7 @@ public class InsertToDBWithTestData {
         Random random = new Random();
         dateMill = (long) (random.nextDouble() * dateMill);
 
-        return DATE_FORMATER.format(new Date(dateMill));
+        return DateUtil.getFormatDate("yyyy-MM-dd", new Date(dateMill));
     }
 
 
