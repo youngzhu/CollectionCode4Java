@@ -1,4 +1,4 @@
-package org.young.db.mysql;
+package org.young.db.sql;
 
 
 /**
@@ -9,7 +9,7 @@ package org.young.db.mysql;
  *
  * Package&FileName: org.young.db.mysql.MySQL
  */
-public class MySQL {
+public class MySQLSQL extends AbstractCommonSQL {
     //~ Methods ****************************************************************
 
     /**
@@ -21,11 +21,11 @@ public class MySQL {
      *
      * @return
      */
-    public static String getPagingSql(String querySql, int pageSize,
+    public String getPagingSql(String querySql, int pageSize,
         int pageNum) {
         StringBuffer sb = new StringBuffer();
 
-        int          start    = (pageSize * (pageNum - 1));
+        int          start    = super.getStartIndex(pageNum, pageSize);
 
         sb.append(querySql)
           .append((pageNum > 1) ? (" limit " + start + ", " + pageSize)
