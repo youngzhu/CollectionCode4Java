@@ -14,14 +14,22 @@ where rownum <= N
 		if (1 == pageNum) {
 			sb.append(querySql);
 			
+			StringBuffer sbRownum = new StringBuffer();
 			if (querySql.toUpperCase().contains("WHERE")) {
-				sb.append(ConstantSQL.SQL_AND);
+				sbRownum.append(ConstantSQL.SQL_AND);
 					
 			} else {
-				sb.append(ConstantSQL.SQL_WHERE);
+				sbRownum.append(ConstantSQL.SQL_WHERE);
+			}
+			sbRownum.append(" rownum <= ").append(pageSize).append(" ");
+			
+			int i = sb.toString().toUpperCase().indexOf("ORDER");
+			if (0 < i) {
+				sb.insert(i, sbRownum);
+			} else {
+				sb.append(sbRownum);
 			}
 			
-			sb.append(" rownum <= ").append(pageSize);
 		} else {
 			/*[pageNum > 1]
 			 * select t2.* from
@@ -43,7 +51,7 @@ where rownum <= N
 		}
 		
 		
-		return sb.toString();
+		return sb.append(";").toString();
 	}
 
 }
