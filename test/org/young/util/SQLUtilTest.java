@@ -32,5 +32,14 @@ public class SQLUtilTest {
 		sql = SQLUtil.buildWhereStateAND(list);
 		System.out.println(sql);
 	}
+	
+	@Test
+	public void testBuildParamsWithQuestionMark() {
+		
+		System.out.println(SQLUtil.buildParamsWithQuestionMark(0));
+		System.out.println(SQLUtil.buildParamsWithQuestionMark(1));
+		System.out.println(SQLUtil.buildParamsWithQuestionMark(10));
+		System.out.println(SQLUtil.buildParamsWithQuestionMark(2));
+	}
 
 }

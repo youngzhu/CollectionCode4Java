@@ -34,4 +34,27 @@ public class SQLUtil {
 		
 		return sql;
 	}
+	
+	/**
+	 * 返回类似 (?, ?, ?, ?)
+	 * @param paramsNum 参数个数
+	 * @return
+	 */
+	public static String buildParamsWithQuestionMark(int paramsNum) {
+		StringBuffer sb = new StringBuffer();
+		
+		if (0 < paramsNum) {
+			sb.append("(");
+			for (int i = 0; i < paramsNum; i ++) {
+				if (0 != i) {
+					sb.append(", ");
+				} 
+				
+				sb.append("?");
+			}
+			sb.append(")");
+		}
+		
+		return sb.toString();
+	}
 }
