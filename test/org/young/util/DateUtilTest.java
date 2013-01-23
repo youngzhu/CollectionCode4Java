@@ -24,8 +24,12 @@ public class DateUtilTest {
 		System.out.println(date2);
 		
 		// Test
-		Date date3 = DateUtil.getFormatDate(null, "2012-11-12 22:00:00");
+		Date date3 = DateUtil.getFormatDate(null, "2012-11-21 22:00:00");
 		Date date4 = DateUtil.addDay(99, date3);
 		System.out.println(date4);
+		
+		Date date5 = DateUtil.getFormatDate(null, "2013-02-19 22:00:00");
+		Date date6 = DateUtil.subtractDay(99, date5);
+		System.out.println(date6);
 	}
 }
