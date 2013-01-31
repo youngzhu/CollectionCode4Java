@@ -19,4 +19,10 @@ public class DBTest {
             
         }
     }
+    
+    @Test
+    public void testGenerateUniqueKeyWithLength() {
+    	
+    	System.out.println(DB.generateUniqueKey(32));
+    }
 }
