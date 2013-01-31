@@ -1,0 +1,6 @@
+本例中用到的JAR:
+Hibernate：
+[HIBERNATE_PATH]\lib\required\ 下所有的JAR
+
+JDBC：
+mysql-connector-java-5.1.22-bin.jar
