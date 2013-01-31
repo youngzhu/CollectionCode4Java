@@ -6,7 +6,7 @@
 -->
 <hibernate-mapping>
     <class name="org.young.hibernate.entity.Order" table="tbl_order" catalog="hibernate">
-        <composite-id name="id" class="OrderId">
+        <composite-id name="id" class="org.young.hibernate.entity.OrderId">
             <key-property name="orderId" type="java.lang.String">
                 <column name="order_id" length="32" />
             </key-property>
