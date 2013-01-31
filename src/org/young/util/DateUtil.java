@@ -12,6 +12,10 @@ public abstract class DateUtil {
 
     /** DEFAULT_PATTERN */
     public static final String DEFAULT_PATTERN = "yyyy-MM-dd HH:mm:ss";
+    
+    public static final long SECONDS_PER_MINUTE = 60L;
+    
+    public static final long MINUTES_PER_HOUR = 60L;
 
     /** DATE_MAP */
     private static final Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -1003,7 +1007,7 @@ loop:
     }
 
     /**
-     * У�����ڸ�ʽ�Ƿ���ȷ
+     * 校验日期格式是否正确
      *
      * @param sourceDate
      *
@@ -1027,7 +1031,7 @@ loop:
     }
 
     /**
-     * ���ڱȽ�date1�Ƿ����date2
+     * 日期比较date1是否大于date2
      *
      * @param str1
      * @param str2
@@ -1046,7 +1050,7 @@ loop:
     }
 
     /**
-     * ���ڱȽ� date1��date2֮��ļ���Ƿ���ڵ���1�꣬������������true
+     * 日期比较 date1和date2之间的间隔是否大于等于1年，满足条件返回true
      *
      * @param str1
      * @param str2
@@ -1068,7 +1072,7 @@ loop:
         return true;
     }
 
-    /**����ɾ����
+    /**日期删除天
      * @return
      */
     public static Date delDay(int day, Date date) {
@@ -1077,5 +1081,15 @@ loop:
         calendar.add(Calendar.DAY_OF_MONTH, day);
 
         return calendar.getTime();
+    }
+    
+    public static double getMinutesBySeconds(long seconds) {
+    	
+    	return seconds * 1.0 / SECONDS_PER_MINUTE;
+    }
+    
+    public static double getHoursBySeconds(long seconds) {
+    	
+    	return getMinutesBySeconds(seconds) / MINUTES_PER_HOUR;
     }
 }

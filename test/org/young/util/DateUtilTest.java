@@ -32,4 +32,15 @@ public class DateUtilTest {
 		Date date6 = DateUtil.subtractDay(99, date5);
 		System.out.println(date6);
 	}
+	
+	@Test
+	public void testGetHourAndGetMinuteBySeconds() {
+		
+		long seconds = 1 * 60 * 60;
+		seconds = 2172;
+		
+		System.out.println(DateUtil.getMinutesBySeconds(seconds));
+		
+		System.out.println(DateUtil.getHoursBySeconds(seconds));
+	}
 }
