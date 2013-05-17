@@ -13,6 +13,8 @@ public abstract class DateUtil {
     /** DEFAULT_PATTERN */
     public static final String DEFAULT_PATTERN = "yyyy-MM-dd HH:mm:ss";
     
+    public static final String DATE_PATTERN_YMD = "yyyy-MM-dd";
+    
     public static final long SECONDS_PER_MINUTE = 60L;
     
     public static final long MINUTES_PER_HOUR = 60L;
@@ -241,7 +243,20 @@ public abstract class DateUtil {
 
         return calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
     }
+    
+    /**
+     * Day of Week in Month
+     *
+     * @param date
+     *
+     * @return day
+     */
+    public static int getWeekOfYearByDate(Date date) {
+        Calendar calendar = getCalendar(date);
 
+        return calendar.get(Calendar.WEEK_OF_YEAR);
+    }
+    
     /**
      * Hour
      *

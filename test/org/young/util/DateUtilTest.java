@@ -43,4 +43,11 @@ public class DateUtilTest {
 		
 		System.out.println(DateUtil.getHoursBySeconds(seconds));
 	}
+	
+	@Test 
+	public void testGetWeekOfYearByDate() {
+		Date date = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, "2012-12-09");
+		
+		System.out.println(DateUtil.getWeekOfYearByDate(date));
+	}
 }
