@@ -21,7 +21,7 @@ public class ProxyedURL {
 	private static final String PROXY_HOST = "PROXY_HOST";
 	private static final String PROXY_PORT = "PROXY_PORT";
 	private static final String PROXY_USERNAME = "PROXY_USERNAME";
-	private static final String PROXY_PASSWORD = "Young@1223413";
+	private static final String PROXY_PASSWORD = "PROXY_PASSWORD";
 
 	public void readStream(String urlStr) {
 		setProxy(true);
