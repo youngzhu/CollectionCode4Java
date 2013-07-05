@@ -34,6 +34,8 @@ public class ProxyedURL {
 	private static final int PROXY_PORT_INT = 8002;
 
 	/**
+	 * System.Property 方式
+	 * 
 	 * url.openStream();
 	 * 
 	 * @param urlStr
@@ -66,6 +68,8 @@ public class ProxyedURL {
 	}
 	
 	/**
+	 * Proxy类方式
+	 * 
 	 * 1、url.openConnection(proxy);
 	 * 2、conn.getInputStream();
 	 * 
