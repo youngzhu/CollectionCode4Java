@@ -9,5 +9,11 @@ public class ProxyedURLTest {
 		ProxyedURL url = new ProxyedURL();
 		url.readStream("http://www.baidu.com/");
 	}
+	
+	@Test
+	public void testReadStream2() {
+		ProxyedURL url = new ProxyedURL();
+		url.readStream2("http://www.baidu.com/");
+	}
 
 }

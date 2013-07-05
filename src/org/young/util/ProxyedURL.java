@@ -5,8 +5,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Authenticator;
+import java.net.InetSocketAddress;
 import java.net.PasswordAuthentication;
+import java.net.Proxy;
 import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * Java程序，使用代理连接外网
@@ -18,11 +21,23 @@ import java.net.URL;
  */
 public class ProxyedURL {
 	
-	private static final String PROXY_HOST = "PROXY_HOST";
-	private static final String PROXY_PORT = "PROXY_PORT";
-	private static final String PROXY_USERNAME = "PROXY_USERNAME";
-	private static final String PROXY_PASSWORD = "PROXY_PASSWORD";
+//	private static final String PROXY_HOST = "PROXY_HOST";
+//	private static final String PROXY_PORT = "PROXY_PORT";
+//	private static final String PROXY_USERNAME = "PROXY_USERNAME";
+//	private static final String PROXY_PASSWORD = "PROXY_PASSWORD";
+	
+	private static final String PROXY_HOST = "10.191.113.100";
+	private static final String PROXY_PORT = "8002";
+	private static final String PROXY_USERNAME = "c_zhuyang002";
+	private static final String PROXY_PASSWORD = "Young@1223413";
+	
+	private static final int PROXY_PORT_INT = 8002;
 
+	/**
+	 * url.openStream();
+	 * 
+	 * @param urlStr
+	 */
 	public void readStream(String urlStr) {
 		setProxy(true);
 		
@@ -48,7 +63,42 @@ public class ProxyedURL {
 			}
 			
 		}
+	}
+	
+	/**
+	 * 1、url.openConnection(proxy);
+	 * 2、conn.getInputStream();
+	 * 
+	 * @param urlStr
+	 */
+	public void readStream2(String urlStr) {
 		
+		Authenticator.setDefault(new BasicAuthenticator(PROXY_USERNAME, PROXY_PASSWORD));
+	    Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(PROXY_HOST, PROXY_PORT_INT));  
+	      
+		InputStream is = null;
+		BufferedReader br = null;
+		String line = null;
+		try {
+			URL url = new URL(urlStr);
+			URLConnection conn = url.openConnection(proxy);
+			is = conn.getInputStream();
+			br = new BufferedReader(new InputStreamReader(is, "utf8"));
+			
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				br.close();
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
 	}
 
 	/**
@@ -72,8 +122,6 @@ public class ProxyedURL {
 //		System.setProperty("socksProxyHost",PROXY_HOST);
 //		System.setProperty("socksProxyPort",PROXY_PORT);
 
-		
-		
 		/*
 		 * 需要用户名/密码时，下面的方法是没有用的
 		 * System.setProperty("proxyUser", PROXY_USERNAME);
