@@ -21,15 +21,10 @@ import java.net.URLConnection;
  */
 public class ProxyedURL {
 	
-//	private static final String PROXY_HOST = "PROXY_HOST";
-//	private static final String PROXY_PORT = "PROXY_PORT";
-//	private static final String PROXY_USERNAME = "PROXY_USERNAME";
-//	private static final String PROXY_PASSWORD = "PROXY_PASSWORD";
-	
-	private static final String PROXY_HOST = "10.191.113.100";
-	private static final String PROXY_PORT = "8002";
-	private static final String PROXY_USERNAME = "c_zhuyang002";
-	private static final String PROXY_PASSWORD = "Young@1223413";
+	private static final String PROXY_HOST = "PROXY_HOST";
+	private static final String PROXY_PORT = "PROXY_PORT";
+	private static final String PROXY_USERNAME = "PROXY_USERNAME";
+	private static final String PROXY_PASSWORD = "PROXY_PASSWORD";
 	
 	private static final int PROXY_PORT_INT = 8002;
 
