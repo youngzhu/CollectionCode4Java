@@ -60,6 +60,21 @@ public class ProxyedURL {
 		System.setProperty("proxyPort", PROXY_PORT);
 		
 		/*
+		 * FTP 协议代理（为验证）
+		 */
+//		System.setProperty("ftpProxyHost",PROXY_HOST);
+//		System.setProperty("ftpksProxyPort",PROXY_PORT);
+		
+		/*
+		 * Socks4代理服务器的方法：（未验证）
+		 * Usually the proxy Port for Socks4 is port 1080
+		 */
+//		System.setProperty("socksProxyHost",PROXY_HOST);
+//		System.setProperty("socksProxyPort",PROXY_PORT);
+
+		
+		
+		/*
 		 * 需要用户名/密码时，下面的方法是没有用的
 		 * System.setProperty("proxyUser", PROXY_USERNAME);
          * System.setProperty("proxyPassword", PROXY_PASSWORD);
