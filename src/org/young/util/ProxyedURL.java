@@ -109,7 +109,7 @@ public class ProxyedURL {
 		System.setProperty("proxyPort", PROXY_PORT);
 		
 		/*
-		 * FTP 协议代理（为验证）
+		 * FTP 协议代理（未验证）
 		 */
 //		System.setProperty("ftpProxyHost",PROXY_HOST);
 //		System.setProperty("ftpksProxyPort",PROXY_PORT);
