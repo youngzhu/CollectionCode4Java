@@ -41,4 +41,32 @@ public class Order {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
+	
+	@Override
+	public int hashCode() {
+		return id.getCustomerId().hashCode() 
+				+ id.getProductId().hashCode() 
+				+ id.getOrderId().hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (! (obj instanceof Order)) {
+			return false;
+		}
+		
+		Order order = (Order) obj;
+		
+		return order.getId().getCustomerId().equals(this.getId().getCustomerId())
+				&& order.getId().getOrderId().equals(this.getId().getOrderId())
+				&& order.getId().getProductId().equals(this.getId().getProductId());
+	}
+	
+	@Override
+	public String toString() {
+		return "orderId=" + this.getId().getOrderId()
+					+ " | customerId=" + this.getId().getCustomerId()
+					+ " | productId=" + this.getId().getProductId();
+	}
 }
