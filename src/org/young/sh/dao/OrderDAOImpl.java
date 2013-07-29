@@ -14,7 +14,6 @@ import org.young.hibernate.entity.Order;
 public class OrderDAOImpl extends DefaultDAO implements
 		IOrderDAO {
 
-	@Override
 	public void add(Order order) {
 		
 		getHibernateTemplate().save(order);

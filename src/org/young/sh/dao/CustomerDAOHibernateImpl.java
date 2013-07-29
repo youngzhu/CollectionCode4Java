@@ -8,7 +8,6 @@ import org.young.hibernate.entity.Customer;
 public class CustomerDAOHibernateImpl extends DefaultDAO implements
 		ICustomerDAO {
 
-	@Override
 	public void add(Customer customer) {
 		
 		super.getHibernateTemplate().save(customer);
@@ -16,7 +15,6 @@ public class CustomerDAOHibernateImpl extends DefaultDAO implements
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<Customer> load() {
 		
 		return getHibernateTemplate().loadAll(Customer.class);
