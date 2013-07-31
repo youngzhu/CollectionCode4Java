@@ -37,30 +37,24 @@ public class OrderDAOImplTest extends DefaultDAOTest {
 		
 		// 向数据库中添加数据
 		orderDAO.add(order);
+		flushCurrentSession();
 		
 		logger.info("add order: " + order);
 		
 		// 验证
-		/*
-		 * CREATE TABLE `tbl_order` (
-  `order_id` varchar(32) NOT NULL,
-  `customer_id` varchar(32) NOT NULL,
-  `product_id` varchar(32) NOT NULL,
-  `order_date` datetime DEFAULT NULL COMMENT '下单时间',
-  `remark` longtext COMMENT '备注',
-  PRIMARY KEY (`order_id`,`customer_id`,`product_id`)
-		 */
 		String sql = "SELECT COUNT(1) AS NUM_OF_ORDER FROM TBL_ORDER T WHERE ORDER_ID=? AND CUSTOMER_ID=? AND PRODUCT_ID=?";
 		List<Object> args = new ArrayList<Object>();
 		args.add(orderId);
 		args.add(customerId);
 		args.add(productId);
 		
+		
 		int count = getJdbcTemplate().queryForInt(sql, args.toArray());
 		// 数据中应该有且只有1条数据
 		assertEquals(1, count);
 	}
 
+	//通过setter方法自动从context里注入neiDAO bean，而不用显示调用  
 	public void setOrderDAO(IOrderDAO orderDAO) {
 		this.orderDAO = orderDAO;
 	}
