@@ -2,7 +2,7 @@ package org.young.algorithm.sort;
 
 
 /**
- * 插入排序（Insertion Sort�?
+ * 插入排序（Insertion Sort）
  *
  * @author by Young.ZHU
  * on 下午10:27:21 2012-7-22
