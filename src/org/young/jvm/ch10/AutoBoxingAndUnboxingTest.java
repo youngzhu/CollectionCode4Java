@@ -2,6 +2,9 @@ package org.young.jvm.ch10;
 
 /**
  * 自动装箱，拆箱的测试
+ * 
+ * 包装类的“==”运算在不遇到算数运算的情况下不会自动拆箱。
+ * 同时，equals()方法不处理数据转型的关系
  *
  * @author by Young.ZHU
  *      on 2014年7月26日
@@ -22,6 +25,7 @@ public class AutoBoxingAndUnboxingTest {
 		Long g = 3L;
 		
 		/*
+		 * 运行结果
 		 * true
 false
 true
@@ -29,6 +33,9 @@ true
 true
 true
 false
+		 */
+		/*
+		 * 猜测结果 => 运行结果
 		 */
 		System.out.println(c == d); // false => true
 		System.out.println(e == f); // false => false
