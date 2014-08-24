@@ -1,0 +1,4 @@
+sudo apt-get install build-essential gawk m4 libasound2-dev libcups2-dev libxrender-dev xorg-dev xutils-dev x11proto-print-dev binutils libmotif3 libmotif-dev ant
+
+openjdk-6-jdk，不确定要不要。
+不过装了肯定没有影响，就是占了点空间。
