@@ -41,6 +41,7 @@ public class BinaryOperation {
 		default :
 			throw new Exception("Unknown operation:" + operation);
 		}
+		
 	}
 	
 }
