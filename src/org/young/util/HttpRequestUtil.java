@@ -446,6 +446,4 @@ public class HttpRequestUtil {
 //        return "POST响应：" + result;
         System.out.println(result);
     } 
-
-
 }
