@@ -1,6 +1,9 @@
 package org.young.util;
 
 
+import java.util.Date;
+import java.util.Random;
+
 import org.junit.Test;
 
 public class HttpRequestUtilTest extends HttpRequestUtil {
@@ -59,8 +62,36 @@ public class HttpRequestUtilTest extends HttpRequestUtil {
 	}
 	
 	@Test
-	public void testLogToEDS() {
-		HttpRequestUtil.logToEDS();
+	public void testLogToEDS() throws Exception {
+		Date from = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, "2018-06-12");
+		String dateStr;
+		
+		for (int i = 0; i < 5; i++) {
+			dateStr = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, from);
+			System.out.println(dateStr);
+			HttpRequestUtil.logToEDS(dateStr);
+			long interval = (long)(Math.random() * 4000L);
+			System.out.println(interval);
+			Thread.sleep(interval);
+			from = DateUtil.addDay(1, from);
+		}
+	}
+	
+	@Test
+	public void testWeekReportToEDS() throws Exception {
+		Date from = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, "2018-07-16");
+		Date to = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, "2019-01-11");
+		
+		String dateStr;
+		do {
+			dateStr = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, from);
+			System.out.println(dateStr);
+			HttpRequestUtil.weekReportToEDS(dateStr);
+			long interval = (long)(Math.random() * 4000L);
+			System.out.println(interval);
+			Thread.sleep(interval);
+			from = DateUtil.addDay(7, from);
+		} while (from.before(to));
 	}
 
 }
