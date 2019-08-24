@@ -366,7 +366,7 @@ public class HttpRequestUtil {
         
         param += "&txtStartTime=" + startTime;
         param += "&txtEndTime=" + endTime;
-        param += "&ddlProjectList=8300&hplbWorkType=0106&TextBox1=&txtMemo=coding&btnSave=+%E7%A1%AE+%E5%AE%9A+&txtnodate=" + logDate;
+        param += "&ddlProjectList=9074&hplbWorkType=0106&TextBox1=&txtMemo=coding&btnSave=+%E7%A1%AE+%E5%AE%9A+&txtnodate=" + logDate;
         param += "&txtnoStartTime=" + startTime;
         param += "&txtnoEndTime=" + endTime;
         param += "&TextBox6=&txtnoMemo=&txtCRMDate=" + logDate;
