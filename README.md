@@ -14,4 +14,4 @@ As using the Annotation(@Test), please add library JUnit Version 4(+).
     方法（Eclipse）：右击 config 目录 -> Build Path -> Use as Source Folder
 
 # 工具
-- 查找maven 的 dependency 的 version 等信息，[https://search.maven.org/](https://search.maven.org/)
+- 查找maven 的 dependency 的 version 等信息，[https://search.maven.org/](https://search.maven.org/) 或者 [https://mvnrepository.com/](https://mvnrepository.com/)
