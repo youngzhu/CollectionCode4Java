@@ -9,7 +9,7 @@ public class EDSUtilTest extends EDSUtil {
 	
 	@Test
 	public void testLogToEDS() throws Exception {
-		Date from = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, "2019-10-09");
+		Date from = DateUtil.getFormatDate(DateUtil.DATE_PATTERN_YMD, "2020-04-06");
 		String dateStr;
 		
 		for (int i = 0; i < 5; i++) {
