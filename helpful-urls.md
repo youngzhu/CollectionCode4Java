@@ -6,6 +6,8 @@
 ## 技术类
 - [https://blog.csdn.net/upgroup/article/details/81052047](https://blog.csdn.net/upgroup/article/details/81052047)
 IntelliJ IDEA 设置 VM 运行参数。
+- Java VM 启动参数详解
+[https://blog.csdn.net/weixin_33720452/article/details/89623125](https://blog.csdn.net/weixin_33720452/article/details/89623125)
 
 ## 生活类
 
