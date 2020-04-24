@@ -7,7 +7,7 @@ import org.young.jvm.constant.Constants;
  * 
  * minor:未成年的，次要的，二流的
  * 
- * VM 参数：-verbose:gc -Xms20M -Xmn10m -XX:+PrintGCDetails
+ * VM 参数：-verbose:gc -Xms20M -Xmn10m -Xlog:gc*
  * 			-XX:SurvivorRatio=8
  * 
  * verbose:冗长的，详细的
