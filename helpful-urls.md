@@ -3,6 +3,8 @@
 某一天忽然冒出个想法：把曾经对我有过帮助的网站或网页记录一下。以博客的方式，相当于投票吧，增加其PR。
 最直接的应该是点赞之类的。但这样做的前提是必须要有个账号。为了点赞去注册一个账号，不合适。所以另辟蹊径，想了这么一个办法。
 
+各类别按时间顺序添加，排名不分先后。
+
 ## 技术类
 - [https://blog.csdn.net/upgroup/article/details/81052047](https://blog.csdn.net/upgroup/article/details/81052047)  
 IntelliJ IDEA 设置 VM 运行参数。
