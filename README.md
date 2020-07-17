@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/youngzhu/CollectionCode4Java.svg)](http://hits.dwyl.com/youngzhu/CollectionCode4Java)
+
 【中文/Chinese】  
 test包里都是程序的测试用例。基于JUnit测试框架。  
 由于使用了注解（@Test），所以请使用JUnit 4（或以上）.
