@@ -27,4 +27,4 @@ jobs:
       env:
         # 时区设置为上海
         TZ: Asia/Shanghai
-      run: mvn -Dtest EDSUtilTest
+      run: mvn -Dtest EDSUtilTest test
