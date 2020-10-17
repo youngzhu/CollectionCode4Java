@@ -10,7 +10,7 @@ on:
     branches: [ master ]
   schedule: 
     - cron: '0 20 * * 1'
-  workflow_dipatch:
+  workflow_dispatch:
 
 jobs:
   do-log:
