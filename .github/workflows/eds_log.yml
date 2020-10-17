@@ -34,4 +34,5 @@ jobs:
       env:
         # 时区设置为上海
         TZ: Asia/Shanghai
-      run: mvn compile exec:java -Dexec.mainClass="org.young.util.EDSUtilTest"
+      #run: mvn compile exec:java -Dexec.mainClass="org.young.util.EDSUtilTest"
+      run: mvn -Dtest="org.young.util.EDSUtilTest"
