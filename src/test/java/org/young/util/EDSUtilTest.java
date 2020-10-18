@@ -8,6 +8,11 @@ import java.util.Date;
 public class EDSUtilTest extends EDSUtil {
 
 	final String date = "2020-10-19";
+
+	@Test
+	public void testLogin() {
+		login("**", "**");
+	}
 	
 	@Test
 	public void testLogToEDS() throws Exception {

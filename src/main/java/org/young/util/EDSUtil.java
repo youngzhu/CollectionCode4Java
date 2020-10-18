@@ -41,6 +41,26 @@ public class EDSUtil extends HttpRequestUtil {
     }
     };
 
+    /**
+     * 登陆
+     */
+    public static void login(String userId, String password) {
+        final String url = "http://eds.newtouch.cn/eds3/DefaultLogin.aspx?lan=zh-cn";
+
+        Map<String, String> propMap = HTTP_REQUEST_PROPERTY_POST;
+        // 部分需要特殊处理的属性值
+        propMap.put("Referer", url);
+
+        String param = "&UserId=" + userId + "&UserPsd=" + password;
+        String result = sendPost(url, propMap, param);
+//        System.out.println(result);
+        if (result.indexOf(userId) != -1) {
+            System.out.println("登陆成功！");
+        } else {
+            System.out.println("登陆失败！");
+        }
+    }
+
 
     /**
      * EDS Log
