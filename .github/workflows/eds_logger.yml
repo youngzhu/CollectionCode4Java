@@ -32,8 +32,8 @@ jobs:
           ${{ runner.os }}-maven-
     - name: Build with Maven
       env:
-        user_id: ${{ secrets.BILI_JCT }}
-        password: ${{ secrets.BILI_JCT }}
+        user_id: ${{ secrets.EDS_USER_ID }}
+        password: ${{ secrets.EDS_PASSWORD }}
         # 时区设置为上海
         TZ: Asia/Shanghai
       run: mvn compile exec:java -Dexec.mainClass="github.workflow.EDSLogger" -Dexec.args="${user_id} ${password}"
