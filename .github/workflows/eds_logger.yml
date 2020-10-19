@@ -1,6 +1,8 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
+# 参考：https://github.com/JunzhouLiu/BILIBILI-HELPER/actions
+
 name: Log to EDS Every Week
 
 on:
@@ -9,7 +11,10 @@ on:
   pull_request:
     branches: [ master ]
   schedule: 
-    - cron: '0 20 * * 1'
+    # 使用的UTC时间
+    # 北京时间=UTC + 8 => UTC = 北京时间 - 8
+    # 每周一10:15（北京时间）执行一次
+    - cron: '15 2 * * 1'
   workflow_dispatch:
 
 jobs:
