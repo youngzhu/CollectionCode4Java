@@ -145,7 +145,7 @@ public class EDSUtil extends HttpRequestUtil {
         
         param += "&txtStartTime=" + startTime;
         param += "&txtEndTime=" + endTime;
-        param += "&ddlProjectList=9846&hplbWorkType=0106&hplbAction=010601&TextBox1=&txtMemo=coding-testing&btnSave=+%E7%A1%AE+%E5%AE%9A+&txtnodate=" + logDate;
+        param += "&ddlProjectList=10868&hplbWorkType=0106&hplbAction=010601&TextBox1=&txtMemo=coding-testing&btnSave=+%E7%A1%AE+%E5%AE%9A+&txtnodate=" + logDate;
         param += "&txtnoStartTime=" + startTime;
         param += "&txtnoEndTime=" + endTime;
         param += "&TextBox6=&txtnoMemo=&txtCRMDate=" + logDate;
